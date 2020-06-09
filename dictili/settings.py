@@ -142,13 +142,12 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/uploads/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
-AUDIO_ROOT = os.path.join(MEDIA_ROOT, 'generated', 'audio')
-TEXT_ROOT = os.path.join(MEDIA_ROOT, 'generated', 'text')
+AUDIO_ROOT = os.path.join('generated', 'audio')
+TEXT_ROOT = os.path.join('generated', 'text')
 
 # axes configs
 AXES_FAILURE_LIMIT = 5  # block the user after 5 attempts
 AXES_COOLOFF_TIME = 1  # cool off set to one hour
-
 
 PASSWORD_RESET_TABLE = "None"
 PHONE_VERIFICATION_OTP_TABLE = "None"
