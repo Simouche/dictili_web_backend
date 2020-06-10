@@ -78,4 +78,4 @@ class Furniture(Equipment):
 class Instrument(Equipment):
     INSTRUMENT_TYPES = (('B', _('Bistouri')), ('C', _('Cisors')))
 
-    i_type = models.CharField(max_length=3, choices=INSTRUMENT_TYPES)
+    i_type = models.CharField(max_length=3, choices=INSTRUMENT_TYPES, null=True)

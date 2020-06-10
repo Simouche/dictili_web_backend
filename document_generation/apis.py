@@ -33,4 +33,4 @@ class WordViewSet(ModelViewSet):
 class DocumentViewSet(ModelViewSet):
     serializer_class = DocumentSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = Document.objects.All()
+    queryset = Document.objects.all()
