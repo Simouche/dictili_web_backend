@@ -144,6 +144,7 @@ MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 AUDIO_ROOT = os.path.join('generated', 'audio')
 TEXT_ROOT = os.path.join('generated', 'text')
+TEXT_ROOT_WORKER = os.path.join(MEDIA_ROOT, 'generated', 'text')
 
 # axes configs
 AXES_FAILURE_LIMIT = 5  # block the user after 5 attempts

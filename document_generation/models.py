@@ -1,6 +1,6 @@
 import os
 
-from dictili.settings import TEXT_ROOT, AUDIO_ROOT
+from dictili.settings import TEXT_ROOT, AUDIO_ROOT, TEXT_ROOT_WORKER
 from generic_backend.models import BaseModel
 from django.db import models
 from django.utils.translation import gettext as _
@@ -24,8 +24,8 @@ class Document(BaseModel):
 
     @staticmethod
     def get_latest() -> str:
-        files = os.listdir(os.path.join(TEXT_ROOT, "reports"))
-        file_path = os.path.join(TEXT_ROOT, 'reports', files[-1])
+        files = os.listdir(os.path.join(TEXT_ROOT_WORKER, "reports"))
+        file_path = os.path.join(TEXT_ROOT_WORKER, 'reports', files[-1])
         return file_path
 
 

@@ -1,16 +1,14 @@
+import datetime
 import io
 import os
 from threading import Thread
 
 from google.cloud import speech_v1
 from google.cloud.speech_v1 import enums
-
-import datetime
-
 from reportlab.pdfgen import canvas
 
 from base_backend.text_utils import trim_text_to_90chars
-from dictili.settings import TEXT_ROOT, MEDIA_ROOT
+from dictili.settings import MEDIA_ROOT, TEXT_ROOT_WORKER
 
 
 class TranscriptionWorker(Thread):
@@ -27,7 +25,7 @@ class TranscriptionWorker(Thread):
 
     def run(self) -> None:
         result_text = self.transcriber()
-        path = self.pdf_maker(result_text, save_to=os.path.join(TEXT_ROOT, "reports"))
+        path = self.pdf_maker(result_text, save_to=os.path.join(TEXT_ROOT_WORKER, "reports"))
         print(path)
         print("finished")
 
@@ -71,7 +69,7 @@ class TranscriptionWorker(Thread):
         if save_to:
             file_path = os.path.join(save_to, file_name)
         else:
-            file_path = os.path.join(TEXT_ROOT, file_name)
+            file_path = os.path.join(TEXT_ROOT_WORKER, file_name)
         document_title = "Rapport"
         title = "Rapport Medicale"
 
