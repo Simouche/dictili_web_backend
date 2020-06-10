@@ -10,7 +10,7 @@ import datetime
 from reportlab.pdfgen import canvas
 
 from base_backend.text_utils import trim_text_to_90chars
-from dictili.settings import TEXT_ROOT
+from dictili.settings import TEXT_ROOT, MEDIA_ROOT
 
 
 class TranscriptionWorker(Thread):
@@ -57,7 +57,7 @@ class TranscriptionWorker(Thread):
             "sample_rate_hertz": sample_rate_hertz,
             "encoding": encoding,
         }
-        with io.open(self.audio_path, "rb") as f:
+        with io.open(os.path.join(MEDIA_ROOT, self.audio_path), "rb") as f:
             content = f.read()
         audio = {"content": content}
 
