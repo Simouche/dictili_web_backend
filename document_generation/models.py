@@ -1,3 +1,4 @@
+import glob
 import os
 
 from dictili.settings import TEXT_ROOT, AUDIO_ROOT, TEXT_ROOT_WORKER
@@ -24,9 +25,9 @@ class Document(BaseModel):
 
     @staticmethod
     def get_latest() -> str:
-        files = os.listdir(os.path.join(TEXT_ROOT_WORKER, "reports"))
-        file_path = os.path.join(TEXT_ROOT_WORKER, 'reports', files[-1])
-        return file_path
+        files = glob.glob(os.path.join(TEXT_ROOT_WORKER, "reports", "*.pdf"))
+        latest_file = max(files, key=os.path.getctime)
+        return latest_file
 
 
 class AudioFile(BaseModel):
