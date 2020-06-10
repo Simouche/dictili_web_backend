@@ -1,9 +1,11 @@
 from django.db import models
 
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 from generic_backend.models import BaseModel
 from localization_management.models import Country
+
+from base_backend.models import do_nothing, cascade
 
 
 class Medicine(BaseModel):
@@ -54,4 +56,26 @@ class Status(BaseModel):
     def __str__(self):
         return self.name
 
+
 # Status.DoesNotExist
+
+
+class MedicalDomain(BaseModel):
+    name = models.CharField(max_length=150, unique=True)
+
+
+class Speciality(BaseModel):
+    name = models.CharField(max_length=255, unique=True)
+    domain = models.ForeignKey('MedicalDomain', on_delete=cascade, related_name='specialities')
+
+
+class Pathology(BaseModel):
+    TYPES = (('S', _('Sickness')), ('D', _('Disease')), ('C', _('Chronic')))
+
+    name = models.CharField(max_length=255, unique=True)
+    speciality = models.ForeignKey('Speciality', on_delete=do_nothing)
+
+
+class Symptom(BaseModel):
+    name = models.CharField(max_length=255, unique=True)
+    pathology = models.ManyToManyField('Pathology')

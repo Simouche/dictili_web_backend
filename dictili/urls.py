@@ -21,5 +21,9 @@ from dictili import settings
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('files/', include('document_generation.urls'))
+                  path('documents/', include('document_generation.urls')),
+                  path('localization/', include('localization_management.urls')),
+                  path('medical/', include('dictili_medical.urls')),
+                  path('healthcare/', include('healthcare_management.urls')),
+                  path('notifications/', include("notifications.urls"))
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

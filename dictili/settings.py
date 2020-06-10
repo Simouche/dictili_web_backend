@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -51,9 +53,12 @@ INSTALLED_APPS = [
 
 ]
 
+AUTH_USER_MODEL = 'accounts.User'
+
 AUTHENTICATION_BACKENDS = [
     'axes.backends.AxesBackend',
     'django.contrib.auth.backends.ModelBackend',
+    'base_backend.authentication.PhoneOrEmailBackend'
 ]
 
 MIDDLEWARE = [
@@ -131,16 +136,25 @@ TIME_ZONE = 'Africa/Algiers'
 
 USE_I18N = True
 
-USE_L10N = False
+USE_L10N = True
 
 USE_TZ = True
+
+LANGUAGES = [
+    ('fr', _('Français')),
+    ('en', _('Anglais')),
+    ('ar', _('Arabe'))
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/uploads/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
+MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 AUDIO_ROOT = os.path.join('generated', 'audio')
 TEXT_ROOT = os.path.join('generated', 'text')
@@ -152,3 +166,14 @@ AXES_COOLOFF_TIME = 1  # cool off set to one hour
 
 PASSWORD_RESET_TABLE = "None"
 PHONE_VERIFICATION_OTP_TABLE = "None"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 10,
+}
+
+APP_NAME = "Dictili"
