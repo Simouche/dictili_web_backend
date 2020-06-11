@@ -25,5 +25,6 @@ urlpatterns = [
                   path('localization/', include('localization_management.urls')),
                   path('medical/', include('dictili_medical.urls')),
                   path('healthcare/', include('healthcare_management.urls')),
-                  path('notifications/', include("notifications.urls"))
+                  path('notifications/', include("notifications.urls")),
+                  path("accounts/", include("accounts.urls"))
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

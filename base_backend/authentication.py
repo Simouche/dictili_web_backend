@@ -12,7 +12,8 @@ class PhoneOrEmailBackend(ModelBackend):
         if username is None or password is None:
             return
         try:
-            user = UserModel.objects.get(Q(phone=username) | Q(email=username))
+            # user = UserModel.objects.get(Q(phone=username) | Q(email=username))
+            user = UserModel.objects.get(Q(email=username))
         except UserModel.DoesNotExist:
             # Run the default password hasher once to reduce the timing
             # difference between an existing and a nonexistent user (#20760).

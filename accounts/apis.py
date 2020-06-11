@@ -24,6 +24,7 @@ class LoginApi(ObtainAuthToken):
                 user_id=user.pk,
                 email=user.email,
                 username=user.username,
+                type=user.user_type
             )
         )
 

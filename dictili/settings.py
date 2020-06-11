@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     # third party
     'axes',
     'django_password_strength',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework.authtoken'
 
 ]
 
@@ -161,7 +162,7 @@ TEXT_ROOT = os.path.join('generated', 'text')
 TEXT_ROOT_WORKER = os.path.join(MEDIA_ROOT, 'generated', 'text')
 
 # axes configs
-AXES_FAILURE_LIMIT = 5  # block the user after 5 attempts
+AXES_FAILURE_LIMIT = 100  # block the user after 5 attempts
 AXES_COOLOFF_TIME = 1  # cool off set to one hour
 
 PASSWORD_RESET_TABLE = "None"

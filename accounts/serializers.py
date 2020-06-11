@@ -7,7 +7,7 @@ from accounts.models import Profile, AccessTimes
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
-        fields = ["first_name", "last_name", 'email', 'password', 'username']
+        fields = ["first_name", "last_name", 'email', 'password', 'username', 'user_type']
 
     def create(self, validated_data):
         user = get_user_model().objects.create(**validated_data)
