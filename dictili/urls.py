@@ -22,7 +22,7 @@ from dictili import settings
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('documents/', include('document_generation.urls')),
-                  path('localization/', include('localization_management.urls')),
+                  path('location/', include('localization_management.urls')),
                   path('medical/', include('dictili_medical.urls')),
                   path('healthcare/', include('healthcare_management.urls')),
                   path('notifications/', include("notifications.urls")),

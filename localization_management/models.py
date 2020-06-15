@@ -20,8 +20,8 @@ class State(BaseModel):
     matricule = models.IntegerField()
     code_postal = models.IntegerField()
     country = models.ForeignKey('Country', on_delete=cascade, related_name="states")
-    latitude = models.FloatField(null=True)
-    longitude = models.FloatField(null=True)
+    latitude = models.CharField(max_length=50, null=True)
+    longitude = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return "{0} {1}".format(self.matricule, self.name)

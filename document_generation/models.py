@@ -1,6 +1,9 @@
 import glob
 import os
 
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 from base_backend.models import do_nothing
 from dictili.settings import TEXT_ROOT, AUDIO_ROOT, TEXT_ROOT_WORKER
 from generic_backend.models import BaseModel
@@ -10,8 +13,22 @@ from django.utils.translation import gettext_lazy as _
 
 class Word(BaseModel):
     word = models.CharField(max_length=255, unique=True, null=False)
-    context = models.ManyToManyField("self")
-    domain = models.ManyToManyField("dictili_medical.MedicalDomain")
+    contexts = models.ManyToManyField("self", through='ContextScore', through_fields=('word', 'another_word'))
+
+
+class ContextScore(BaseModel):
+    word = models.ForeignKey('Word', on_delete=do_nothing, related_name="first_context")
+    another_word = models.ForeignKey('Word', on_delete=do_nothing, related_name="second_context")
+    domain = models.ForeignKey("dictili_medical.MedicalDomain", on_delete=do_nothing, related_name="contexts")
+    score = models.IntegerField(default=0)
+
+    class Meta:
+        unique_together = ('word', 'another_word', 'domain')
+
+
+class OutOfContext(BaseModel):
+    word = models.CharField(max_length=255, unique=True, null=False)
+    count = models.IntegerField(default=0)
 
 
 class Document(BaseModel):
@@ -34,3 +51,12 @@ class AudioFile(BaseModel):
     generated_by = models.OneToOneField("healthcare_management.HealthCareWorker", models.DO_NOTHING)
     concerns = models.OneToOneField("healthcare_management.Patient", do_nothing)
     file_location = models.FileField(upload_to=AUDIO_ROOT)
+
+
+@receiver(post_save, sender=AudioFile)
+def audio_file_created_signal(sender, instance, created, raw, **kwargs):
+    if created and not raw:
+        from document_generation.workers import TranscriptionWorker
+        transcription_worker = TranscriptionWorker()
+        transcription_worker.prepare(instance.file_location.path)
+        transcription_worker.start()

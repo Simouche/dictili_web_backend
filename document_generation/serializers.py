@@ -11,9 +11,7 @@ class AudioFileSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         instance = super(AudioFileSerializer, self).create(validated_data=validated_data)
-        transcription_worker = TranscriptionWorker()
-        transcription_worker.prepare(instance.file_location.path)
-        transcription_worker.start()
+
         return instance
 
 

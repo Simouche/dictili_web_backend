@@ -13,6 +13,11 @@ class HealthCareWorkerSerializer(serializers.ModelSerializer):
     class Meta:
         model = HealthCareWorker
         fields = ['identifier', 'professional_card', 'works_at', 'access_time', 'profile', 'worker_type']
+        extra_kwargs = {
+            'access_time': {
+                "required": False
+            }
+        }
 
 
 class PatientSerializer(serializers.ModelSerializer):
@@ -20,7 +25,10 @@ class PatientSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Patient
-        fields = ['profile', 'insurance_number']
+        fields = ['id', 'profile', 'insurance_number']
+        extra_kwargs = {
+            'id': {'read_only': True}
+        }
 
 
 class DiagnosisActionSerializer(serializers.ModelSerializer):

@@ -16,18 +16,23 @@ class TranscriptionWorker(Thread):
     def __init__(self, *args, **kwargs):
         super(TranscriptionWorker, self).__init__(*args, **kwargs)
 
-    def prepare(self, audio_path: str, user_id: int = None, language_code: str = "fr-FR",
-                sample_rate_hertz: int = 8000, save_to: str = None) -> None:
+    def prepare(self, audio_path: str, language_code: str = "fr-FR",
+                sample_rate_hertz: int = 8000, save_to: str = None, user_id: int = None) -> None:
         self.audio_path = audio_path
         self.language_code = language_code
         self.sammple_rate_herts = sample_rate_hertz
         self.save_to = save_to
+        self.user_id = user_id
 
     def run(self) -> None:
         result_text = self.transcriber()
         path = self.pdf_maker(result_text, save_to=os.path.join(TEXT_ROOT_WORKER, "reports"))
+        nlp_worker = NLPWorker()
+        nlp_worker.prepare(result_text, 0, path, user_id=self.user_id)
+        nlp_worker.start()
+
         print(path)
-        print("finished")
+        print("transcripter finished")
 
     def transcriber(self) -> str:
         """
@@ -103,3 +108,52 @@ class TranscriptionWorker(Thread):
         pdf.drawString(400, 100, "Caché et Signature")
         pdf.save()
         return file_path
+
+
+class NLPWorker(Thread):
+
+    def prepare(self, text: str, audio_file: int, file_path: str, doc_type: str = 'P', user_id: int = None) -> None:
+        self.text = text
+        self.audio_file = audio_file
+        self.file_path = file_path
+        self.type = doc_type
+        self.user_id = user_id
+
+    def run(self) -> None:
+        from document_generation.models import Document
+        document = Document.objects.create(type=self.type, audio_file_id=self.audio_file, text=self.text,
+                                           text_file=self.file_path)
+        words, ids = self.context_checker()
+        document.words.add(*ids)
+
+        print("nlp worker finished")
+
+    def context_checker(self) -> tuple:
+        from healthcare_management.models import HealthCareWorker
+        from document_generation.nlp_utils import pre_processing
+        from document_generation.models import Word
+        from document_generation.models import ContextScore
+        from document_generation.models import OutOfContext
+
+        domain = HealthCareWorker.objects.get(pk=self.user_id).works_at.speciality.domain
+        processed_text = pre_processing(self.text)
+        existing_words = Word.objects.all().values_list('word', flat=True)
+        medical_words = [word for word in processed_text if word in existing_words]
+        out_of_context = [word for word in processed_text if word not in existing_words]
+
+        for word in medical_words:
+            for another_word in medical_words:
+                score, created = ContextScore.objects.get_or_create(word=word, another_word=another_word, domain=domain)
+                if not created:
+                    score.score += 1
+                    score.save()
+
+        for word in out_of_context:
+            word, created = OutOfContext.objects.get_or_create(word=word)
+            if not created:
+                word.count += 1
+                word.save()
+
+        medical_words_ids = Word.objects.filter(word__in=medical_words).values_list('pk', flat=True)
+
+        return medical_words, medical_words_ids

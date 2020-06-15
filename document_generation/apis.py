@@ -18,7 +18,6 @@ class AudioFileViewSet(ModelViewSet):
 
         file = open(file_path, 'rb')
         file_name = file_path.split("\\")[-1]
-        print(file_name)
         response = HttpResponse(file, content_type="application/force-download")
         response['Content-Disposition'] = 'attachment; filename="%s"' % file_name + '.pdf'
         return response
