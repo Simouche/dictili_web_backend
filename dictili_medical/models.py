@@ -57,25 +57,38 @@ class Status(BaseModel):
         return self.name
 
 
-# Status.DoesNotExist
-
-
 class MedicalDomain(BaseModel):
     name = models.CharField(max_length=150, unique=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Speciality(BaseModel):
     name = models.CharField(max_length=255, unique=True)
     domain = models.ForeignKey('MedicalDomain', on_delete=cascade, related_name='specialities')
 
+    def __str__(self):
+        return self.name
+
 
 class Pathology(BaseModel):
     TYPES = (('S', _('Sickness')), ('D', _('Disease')), ('C', _('Chronic')))
 
-    name = models.CharField(max_length=255, unique=True)
-    speciality = models.ForeignKey('Speciality', on_delete=do_nothing)
+    concept = models.CharField(max_length=255, null=True, blank=True)
+    is_general_of = models.ManyToManyField('self', 'is_sub_of', blank=True)
+    fr = models.CharField(max_length=255, unique=True, null=True)
+    en = models.CharField(max_length=255, unique=True)
+
+    speciality = models.ForeignKey('Speciality', on_delete=do_nothing, null=True, blank=True)
+
+    def __str__(self):
+        return self.fr
 
 
 class Symptom(BaseModel):
     name = models.CharField(max_length=255, unique=True)
-    pathology = models.ManyToManyField('Pathology')
+    pathology = models.ManyToManyField('Pathology',related_name="symptoms")
+
+    def __str__(self):
+        return self.name

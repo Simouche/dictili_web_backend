@@ -1,19 +1,22 @@
 import glob
 import os
 
+from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils.translation import gettext_lazy as _
 
-from base_backend.models import do_nothing
+from base_backend.models import do_nothing, cascade
 from dictili.settings import TEXT_ROOT, AUDIO_ROOT, TEXT_ROOT_WORKER
 from generic_backend.models import BaseModel
-from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 
 class Word(BaseModel):
     word = models.CharField(max_length=255, unique=True, null=False)
     contexts = models.ManyToManyField("self", through='ContextScore', through_fields=('word', 'another_word'))
+
+    def __str__(self):
+        return self.word
 
 
 class ContextScore(BaseModel):
@@ -30,6 +33,9 @@ class OutOfContext(BaseModel):
     word = models.CharField(max_length=255, unique=True, null=False)
     count = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.word
+
 
 class Document(BaseModel):
     TYPES = (('p', _('Prescription')), ('r', _('Report')))
@@ -38,7 +44,7 @@ class Document(BaseModel):
     words = models.ManyToManyField(Word)
     text = models.CharField(max_length=2048)
     text_file = models.FileField(upload_to=os.path.join(TEXT_ROOT, "prescription" if type == 'p' else 'reports'))
-    audio_file = models.OneToOneField("document_generation.AudioFile", on_delete=do_nothing)
+    audio_file = models.OneToOneField("document_generation.AudioFile", on_delete=cascade)
 
     @staticmethod
     def get_latest() -> str:
@@ -48,8 +54,9 @@ class Document(BaseModel):
 
 
 class AudioFile(BaseModel):
-    generated_by = models.OneToOneField("healthcare_management.HealthCareWorker", models.DO_NOTHING)
-    concerns = models.OneToOneField("healthcare_management.Patient", do_nothing)
+    generated_by = models.ForeignKey("healthcare_management.HealthCareWorker", models.DO_NOTHING,
+                                     related_name="audio_files")
+    concerns = models.ForeignKey("healthcare_management.Patient", do_nothing, null=True, related_name="audio_files")
     file_location = models.FileField(upload_to=AUDIO_ROOT)
 
 
@@ -57,6 +64,8 @@ class AudioFile(BaseModel):
 def audio_file_created_signal(sender, instance, created, raw, **kwargs):
     if created and not raw:
         from document_generation.workers import TranscriptionWorker
-        transcription_worker = TranscriptionWorker()
-        transcription_worker.prepare(instance.file_location.path)
-        transcription_worker.start()
+        meta_data = {
+            'audio_file': instance,
+            'save_to': os.path.join(TEXT_ROOT_WORKER, 'reports'),
+        }
+        TranscriptionWorker.transcription_queue.put(meta_data)

@@ -23,7 +23,7 @@ def notify_user(notifications_token: str, message: dict):
     if notifications_token == '' or notifications_token is None:
         raise ValueError('notifications_token must not be empty, you should provide the user\'s notification token')
 
-    if message['message'] is None or message['message'] == '':
+    if len(message.keys()) < 2:
         raise ValueError('you must provide a message in the notification')
 
     if type(message) is not dict:
@@ -34,6 +34,7 @@ def notify_user(notifications_token: str, message: dict):
 
     msg = messaging.Message(data=message, token=notifications_token)
     response = messaging.send(msg)
+    print(response)
     logger.info(response)
 
 

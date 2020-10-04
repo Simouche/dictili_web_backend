@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'healthcare_management.apps.HealthcareManagementConfig',
     'dictili_medical.apps.MedicineManagementConfig',
     'localization_management.apps.LocalizationManagementConfig',
-    'notifications.apps.NotificationsConfig',
+    'notifications',
 
     # third party
     'axes',

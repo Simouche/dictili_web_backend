@@ -1,7 +1,6 @@
 from rest_framework import serializers
 
 from document_generation.models import AudioFile, Word, Document
-from document_generation.workers import TranscriptionWorker
 
 
 class AudioFileSerializer(serializers.ModelSerializer):
@@ -11,7 +10,6 @@ class AudioFileSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         instance = super(AudioFileSerializer, self).create(validated_data=validated_data)
-
         return instance
 
 

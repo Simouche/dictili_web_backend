@@ -1,7 +1,7 @@
 import nltk
 from nltk.corpus import stopwords
 import string
-from nltk.stem import PorterStemmer
+import re
 
 
 def pre_processing(text):
@@ -28,3 +28,7 @@ def pre_processing(text):
     tokens = [word for word in tokens if len(word) >= 2]
 
     return tokens
+
+
+def cleaner(text: str) -> str:
+    return re.sub('[\\d]', "", text.replace(';', '').replace('[', ' ').replace(']', ''))

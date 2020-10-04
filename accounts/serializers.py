@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = get_user_model()
         fields = ["first_name", "last_name", 'email', 'password', 'username', 'user_type']
         extra_kwargs = {
-            'password': {'write_only': True}
+            'password': {'write_only': True, "required": False}
         }
 
     def create(self, validated_data):
@@ -21,11 +21,14 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
+    # user = UserSerializer()
 
     class Meta:
         model = Profile
-        fields = ['photo', 'address', 'city', 'gender', 'phone', 'user', 'birth_date']
+        fields = ['user', 'photo', 'address', 'city', 'gender', 'phone', 'user', 'birth_date']
+        extra_kwargs = {
+            'user': {'required': False}
+        }
 
 
 class AccessTimesSerializer(serializers.ModelSerializer):

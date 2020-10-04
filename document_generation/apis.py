@@ -1,5 +1,3 @@
-import os
-
 from django.http import HttpResponse
 from rest_framework import permissions
 from rest_framework.viewsets import ModelViewSet
@@ -13,9 +11,14 @@ class AudioFileViewSet(ModelViewSet):
     permission_classes = [permissions.AllowAny]
     queryset = AudioFile.objects.all()
 
+    def create(self, request, *args, **kwargs):
+        obj = request.data.copy()
+        obj['generated_by'] = request.user.profile.healthcareworker.pk
+        obj.data = obj
+        return super(AudioFileViewSet, self).create(obj, *args, **kwargs)
+
     def list(self, request, *args, **kwargs):
         file_path = Document.get_latest()
-
         file = open(file_path, 'rb')
         file_name = file_path.split("\\")[-1]
         response = HttpResponse(file, content_type="application/force-download")

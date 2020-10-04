@@ -43,7 +43,8 @@ class HealthCare(BaseModel):
 
     name = models.CharField(max_length=150)
     address = models.CharField(max_length=150, blank=True, null=True)
-    city = models.ForeignKey('localization_management.City', on_delete=models.DO_NOTHING, blank=True, null=True)
+    city = models.ForeignKey('localization_management.City', on_delete=do_nothing, blank=True, null=True)
+    state = models.ForeignKey('localization_management.State', on_delete=do_nothing, blank=True, null=True)
     phone = models.CharField(max_length=30, blank=True, null=True)
     Type = models.CharField(max_length=3, choices=TYPES)
 

@@ -1,0 +1,962 @@
+﻿{
+    "hopital algerie csv": [
+        {
+            "Nom": "Hôpital Ibn Sina d'Adrar[6] ;",
+            "Wilaya": "adrar"
+        },
+        {
+            "Nom": "Hôpital Mohamed Hachemi de Timimoun[7] ;"
+        },
+        {
+            "Nom": "Hôpital de Reggane[8] ;"
+        },
+        {
+            "Nom": "Hôpital Noureddine Sahraoui d'Aoulef[9] ;"
+        },
+        {
+            "Nom": "Hôpital de Bordj Badji Mokhtar[10] ;"
+        },
+        {
+            "Nom": "Hôpital de Zaouiet Kounta[11] ;"
+        },
+        {
+            "Nom": "Hôpital d'Aougrout[12] ;"
+        },
+        {
+            "Nom": "Hôpital de Ouled Mohamed ;",
+            "Wilaya": "chlef"
+        },
+        {
+            "Nom": "Hôpital de Chorfa ;"
+        },
+        {
+            "Nom": "Hôpital Zighoud Youcef Ténès ;"
+        },
+        {
+            "Nom": "Hôpital ancien de Ténès ;"
+        },
+        {
+            "Nom": "Hôpital de Sobha ;"
+        },
+        {
+            "Nom": "Hôpital de Chettia ;"
+        },
+        {
+            "Nom": "Hôpital des sœurs Bedj ;"
+        },
+        {
+            "Nom": "Hôpital d'Aïn Merane."
+        },
+        {
+            "Nom": "Hôpital Hmida Ben Adjila de Laghouat ;",
+            "Wilaya": "laghouat"
+        },
+        {
+            "Nom": "Hôpital d'Aflou."
+        },
+        {
+            "Nom": "Hôpital Mohamed Boudiaf d'Oum El Bouaghi ;",
+            "Wilaya": "oum el bouaghi"
+        },
+        {
+            "Nom": "Hôpital ancien d'Oum El Bouaghi ;"
+        },
+        {
+            "Nom": "Hôpital Zerdani Salah d'Aïn Beïda ;"
+        },
+        {
+            "Nom": "Hôpital de Meskiana ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn M’lila ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Fakroun."
+        },
+        {
+            "Nom": "Hôpital Touhami Benflis de Batna[14] ;",
+            "Wilaya": "batna"
+        },
+        {
+            "Nom": "Hôpital Mère et enfant Meriem Bouatoura Batna ;"
+        },
+        {
+            "Nom": "Hôpital Sanatorium + ORL (EPH de Batna) ;"
+        },
+        {
+            "Nom": "Centre Anti-cancer de Batna ;"
+        },
+        {
+            "Nom": "Hôpital d'Arris 1 ;"
+        },
+        {
+            "Nom": "Hôpital d'Arris 2 ;"
+        },
+        {
+            "Nom": "Hôpital de Mohamed Boudiaf de Barika ;"
+        },
+        {
+            "Nom": "Hôpital de Amirat Slimane de Barika ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Touta ;"
+        },
+        {
+            "Nom": "Hôpital de Ali Nemer de Mérouana ;"
+        },
+        {
+            "Nom": "Hôpital de Ziza Massika de Mérouana ;"
+        },
+        {
+            "Nom": "Hôpital de N’Gaous ;"
+        },
+        {
+            "Nom": "Hôpital d'El Madher."
+        },
+        {
+            "Nom": "1. Hôpital Frantz Fanon, Béjaïa ;",
+            "Wilaya": "bejaia"
+        },
+        {
+            "Nom": "2. Hôpital Khelil Amrane, Béjaïa ;"
+        },
+        {
+            "Nom": "3. Hôpital Targa Ouzemmour, Béjaïa ;"
+        },
+        {
+            "Nom": "Hôpital Benmerad El Mekki, Amizour ;"
+        },
+        {
+            "Nom": "Hôpital Akloul Ali, Akbou ;"
+        },
+        {
+            "Nom": "Hôpital Rachid Belhocine, Sidi Aïch ;"
+        },
+        {
+            "Nom": "Hôpital Mohamed Arab Hannoz, Kherrata ;"
+        },
+        {
+            "Nom": "Hôpital de Fenaïa Ilmaten ;"
+        },
+        {
+            "Nom": "Hôpital d'Aokas."
+        },
+        {
+            "Nom": "Hôpital Bachir Bennacer de Biskra ;",
+            "Wilaya": "biskra"
+        },
+        {
+            "Nom": "Hôpital Dr Saadane de Biskra ;"
+        },
+        {
+            "Nom": "Hôpital de Ouled Djellal ;"
+        },
+        {
+            "Nom": "Hôpital de Tolga."
+        },
+        {
+            "Nom": "EPH Boudjemaa Tourabi[16];",
+            "Wilaya": "bechar"
+        },
+        {
+            "Nom": "Hôpital de Taghit ;"
+        },
+        {
+            "Nom": "Hôpital de Abadla ;"
+        },
+        {
+            "Nom": "Hôpital de Béni Abbès ;"
+        },
+        {
+            "Nom": "Hôpital de Mohamed Boudiaf (Debdaba)."
+        },
+        {
+            "Nom": "Hôpital Frantz Fanon de Blida ;",
+            "Wilaya": "blida"
+        },
+        {
+            "Nom": "Hôpital de Boufarik ;"
+        },
+        {
+            "Nom": "Hôpital de Meftah ;"
+        },
+        {
+            "Nom": "Hôpital d'El Affroun ;"
+        },
+        {
+            "Nom": "Hôpital psychiatrique de Blida ;"
+        },
+        {
+            "Nom": "Centre anti-cancer de Blida."
+        },
+        {
+            "Nom": "Hôpital de Bouira ;",
+            "Wilaya": "bouira"
+        },
+        {
+            "Nom": "Hôpital de M'Chedellah ;"
+        },
+        {
+            "Nom": "Hôpital de Lakhdaria ;"
+        },
+        {
+            "Nom": "Hôpital de Sour El Ghozlane ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Bessam."
+        },
+        {
+            "Nom": "Hôpital de Tamanrasset ;",
+            "Wilaya": "tamanrasset"
+        },
+        {
+            "Nom": "Hôpital de Aïn Salah."
+        },
+        {
+            "Nom": "Hôpital Alia Salah de Tébessa ;",
+            "Wilaya": "tebessa"
+        },
+        {
+            "Nom": "Hôpital Bouguerra Boulares de Tébessa ;"
+        },
+        {
+            "Nom": "Hôpital de Morst ;"
+        },
+        {
+            "Nom": "Hôpital d'El Aouinet ;"
+        },
+        {
+            "Nom": "Hôpital Tedjini Haddam de Bir El Ater ;"
+        },
+        {
+            "Nom": "Hôpital de Chréa ;"
+        },
+        {
+            "Nom": "Hôpital de Ouenza."
+        },
+        {
+            "Nom": "CHU Tlemcen ;",
+            "Wilaya": "tlemcen"
+        },
+        {
+            "Nom": "Hôpital de Nedroma ;"
+        },
+        {
+            "Nom": "Hôpital de Maghnia ;"
+        },
+        {
+            "Nom": "Hôpital de Ghazaouet ;"
+        },
+        {
+            "Nom": "Hôpital de Sebdou ;"
+        },
+        {
+            "Nom": "Hôpital de Remchi ;"
+        },
+        {
+            "Nom": "Hôpital de Mère-Enfants de Tlemcen."
+        },
+        {
+            "Nom": "Hôpital de Tiaret ;",
+            "Wilaya": "tiaret"
+        },
+        {
+            "Nom": "Hôpital de Frenda ;"
+        },
+        {
+            "Nom": "Hôpital de Mahdia ;"
+        },
+        {
+            "Nom": "Hôpital de Sougueur ;"
+        },
+        {
+            "Nom": "Hôpital de Ksar Chellala ;"
+        },
+        {
+            "Nom": "Hôpital de Mère-Enfant Aourai Zahra ;"
+        },
+        {
+            "Nom": "Hôpital de Psychiatrique Hamdani Adda ;"
+        },
+        {
+            "Nom": "Hôpital Bouabdelli Bouabdellah."
+        },
+        {
+            "Nom": "Hôpital Nedir Mohamed[18] et",
+            "Wilaya": "tizi ouzou"
+        },
+        {
+            "Nom": "Unité Sidi Belloua de Tizi Ouzou[19];"
+        },
+        {
+            "Nom": "Hôpital de Sebihi Tassadit de Tizi-Ouzou ;"
+        },
+        {
+            "Nom": "Hôpital de Larbaa Nath Irathen ;"
+        },
+        {
+            "Nom": "Hôpital de Tigzirt ;"
+        },
+        {
+            "Nom": "Hôpital de Draa El Mizan ;"
+        },
+        {
+            "Nom": "Hôpital de Boghni ;"
+        },
+        {
+            "Nom": "Hôpital de Azazga ;"
+        },
+        {
+            "Nom": "Hôpital de Azeffoun ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn El Hammam ;"
+        },
+        {
+            "Nom": "Hôpital de Oued Aïssi ;"
+        },
+        {
+            "Nom": "Hôpital de Draâ Ben Khedda ;"
+        },
+        {
+            "Nom": "Hôpital \"Petit Omar\" de Draâ Ben Khedda, spécialisé en chirurgie cardiaque."
+        },
+        {
+            "Nom": "Hôpital Mustapha Pacha d'Alger ;",
+            "Wilaya": "alger"
+        },
+        {
+            "Nom": "CHU Lamine Debaghine de Bab El Oued (ex-Maillot) ;"
+        },
+        {
+            "Nom": "CHU Nafissa Hamoud de Hussein Dey (ex-Parnet) ;"
+        },
+        {
+            "Nom": "CHU Issad Hassani de Beni Messous ;"
+        },
+        {
+            "Nom": "Hôpital Pierre et Marie Curie (CPMC) ;"
+        },
+        {
+            "Nom": "Hôpital Maouche Mohand Amokrane (ex-CNMS) ;"
+        },
+        {
+            "Nom": "Hôpital Mohamed Abderrahmani (dit Les Castors) ;"
+        },
+        {
+            "Nom": "Hôpital Hassen Badi d'El Harrach (ex-Belfort) ;"
+        },
+        {
+            "Nom": "Hôpital Selim Zmirli d'El Harrach ;"
+        },
+        {
+            "Nom": "Hôpital Drid Hocine de Kouba ;"
+        },
+        {
+            "Nom": "Hôpital Mahfoud Boucebci de Chéraga ;"
+        },
+        {
+            "Nom": "Hôpital d'Azur Plage ;"
+        },
+        {
+            "Nom": "Hôpital Pr Abdelkader Boukhroufa de Ben Aknoun ;"
+        },
+        {
+            "Nom": "Hôpital de Tixéraïne ;"
+        },
+        {
+            "Nom": "Hôpital El Hadi Flici (ex-El Kettar) ;"
+        },
+        {
+            "Nom": "Hôpital Ali Aït Idir ;"
+        },
+        {
+            "Nom": "Hôpital Djillali Rahmoune (ex-Clinique les Orangers) d'El Mouradia ;"
+        },
+        {
+            "Nom": "Hôpital Bachir Mentouri de Kouba ;"
+        },
+        {
+            "Nom": "Hôpital Djillali Belkhenchir d'El Biar ;"
+        },
+        {
+            "Nom": "Hôpital Belkacemi Tayeb de Zéralda ;"
+        },
+        {
+            "Nom": "Hôpital de Rouiba ;"
+        },
+        {
+            "Nom": "Hôpital de Bologhine ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Taya ;"
+        },
+        {
+            "Nom": "Hôpital Djillali Bounaâma de Douera."
+        },
+        {
+            "Nom": "Centre anti cancer de Djelfa (en construction) ;",
+            "Wilaya": "djelfa"
+        },
+        {
+            "Nom": "Hôpital de Djelfa ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Oussara ;"
+        },
+        {
+            "Nom": "Hôpital de Messaad ;"
+        },
+        {
+            "Nom": "Hôpital de Hassi Bahbah ;"
+        },
+        {
+            "Nom": "Hôpital ophtalmologique de Djelfa ;"
+        },
+        {
+            "Nom": "Hôpital El Idrissia."
+        },
+        {
+            "Nom": "Hôpital de Jijel ;",
+            "Wilaya": "jijel"
+        },
+        {
+            "Nom": "Hôpital d'El Milia ;"
+        },
+        {
+            "Nom": "Hôpital de Taher."
+        },
+        {
+            "Nom": "Hôpital de Sétif ;",
+            "Wilaya": "setif"
+        },
+        {
+            "Nom": "Hôpital d'El Eulma ;"
+        },
+        {
+            "Nom": "Nouveau Hôpital d’El Eulma (en construction) ;"
+        },
+        {
+            "Nom": "Hôpital de Bougaa ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn El Kebira ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Oulmène ;"
+        },
+        {
+            "Nom": "Hôpital de Béni Ourtilène ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Abassa ;"
+        },
+        {
+            "Nom": "Hôpital de Ras El Ma ;"
+        },
+        {
+            "Nom": "Hôpital de Béni Aziz."
+        },
+        {
+            "Nom": "Hôpital Ahmed Medghri ;",
+            "Wilaya": "saida"
+        },
+        {
+            "Nom": "Hôpital Hamdane Bakhta."
+        },
+        {
+            "Nom": "Hôpital de Skikda ;",
+            "Wilaya": "skikda"
+        },
+        {
+            "Nom": "Hôpital d'El Harrouch ;"
+        },
+        {
+            "Nom": "Hôpital de Collo ;"
+        },
+        {
+            "Nom": "Hôpital de Azzaba ;"
+        },
+        {
+            "Nom": "Hôpital de Tamalous."
+        },
+        {
+            "Nom": "CHU Dr Hassani Abdelkader ;",
+            "Wilaya": "sidi bel abbes"
+        },
+        {
+            "Nom": "Hôpital Dahmani Slimane ;"
+        },
+        {
+            "Nom": "Hôpital Hadid Aissa (Telagh) ;"
+        },
+        {
+            "Nom": "Hôpital Marok Abdelkader (Sfisef) ;"
+        },
+        {
+            "Nom": "Hôpital Yamloul Djaafar (Ben Badis) ;"
+        },
+        {
+            "Nom": "Hôpital de Sidi Bel Abbès."
+        },
+        {
+            "Nom": "CHU de Ibn Rochd ;",
+            "Wilaya": "annaba"
+        },
+        {
+            "Nom": "CHU de Ibn sina ;"
+        },
+        {
+            "Nom": "CHU Dorban ;"
+        },
+        {
+            "Nom": "CHU d'El Bouni ;"
+        },
+        {
+            "Nom": "CHU Sainte Thérèse ;"
+        },
+        {
+            "Nom": "Hôpital anti cancer Annaba ;"
+        },
+        {
+            "Nom": "Hôpital d'El Hadjar ;"
+        },
+        {
+            "Nom": "Hôpital de Chetaïbi ;"
+        },
+        {
+            "Nom": "Hôpital d'El Berda ;"
+        },
+        {
+            "Nom": "Hôpital de Seraïdi ;"
+        },
+        {
+            "Nom": "Hôpital Er Razi."
+        },
+        {
+            "Nom": "Hôpital Hakim El Okbi de Guelma ;",
+            "Wilaya": "guelma"
+        },
+        {
+            "Nom": "Hôpital Ibn Zohour de Guelma ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Larbi ;"
+        },
+        {
+            "Nom": "Hôpital de Oued Zenati ;"
+        },
+        {
+            "Nom": "Hôpital de Bouchegouf."
+        },
+        {
+            "Nom": "Hôpital Ibn Badis de Constantine ;",
+            "Wilaya": "constantine"
+        },
+        {
+            "Nom": "Hôpital El Bir de Constantine ;"
+        },
+        {
+            "Nom": "Hôpital Mohamed Boudiaf d'El Khroub ;"
+        },
+        {
+            "Nom": "Hôpital Ali Mendjeli d'El Khroub ;"
+        },
+        {
+            "Nom": "Hôpital de Zighoud Youcef ;"
+        },
+        {
+            "Nom": "Hôpital d'El Riad ;"
+        },
+        {
+            "Nom": "Hôpital de Daksi ;"
+        },
+        {
+            "Nom": "Hôpital de Djebel Ouahch ;"
+        },
+        {
+            "Nom": "Hôpital de Sidi Mabrouk ;"
+        },
+        {
+            "Nom": "Hôpital pédiatrique de la cité Mansourah."
+        },
+        {
+            "Nom": "Hôpital de Médéa ;",
+            "Wilaya": "medéa"
+        },
+        {
+            "Nom": "Hôpital de Berrouaguia ;"
+        },
+        {
+            "Nom": "Hôpital de Tablat ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Boussif ;"
+        },
+        {
+            "Nom": "Hôpital de Ksar El Boukhari ;"
+        },
+        {
+            "Nom": "Hôpital de Béni Slimane ;"
+        },
+        {
+            "Nom": "Hôpital de Chellalet El Adhaoura."
+        },
+        {
+            "Nom": "Hôpital de Mostaganem ;",
+            "Wilaya": "mostaganem"
+        },
+        {
+            "Nom": "CHU de Mostaganem Kharouba ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Tedlès ;"
+        },
+        {
+            "Nom": "Hôpital de Sidi Ali ;"
+        },
+        {
+            "Nom": "Hôpital de Mesra ;"
+        },
+        {
+            "Nom": "Hôpital de Bouguirat ;"
+        },
+        {
+            "Nom": "Hôpital d’Aachaacha ;"
+        },
+        {
+            "Nom": "Hôpital Mère-Enfant Lalla Kheira ;"
+        },
+        {
+            "Nom": "Hôpital de psychiatrie Medjdoub Youcef."
+        },
+        {
+            "Nom": "Hôpital de M'Sila ;",
+            "Wilaya": "msila"
+        },
+        {
+            "Nom": "Hôpital de Boussaada ;"
+        },
+        {
+            "Nom": "Hôpital de Sidi Aïssa ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn El Maleh."
+        },
+        {
+            "Nom": "Hôpital de Meslem Tayeb ;",
+            "Wilaya": "mascara"
+        },
+        {
+            "Nom": "Hôpital de Issaad Khaled ;"
+        },
+        {
+            "Nom": "Hôpital de Tighennif ;"
+        },
+        {
+            "Nom": "Hôpital de Sig ;"
+        },
+        {
+            "Nom": "Hôpital de Mohammadia ;"
+        },
+        {
+            "Nom": "Hôpital de Ghriss ;"
+        },
+        {
+            "Nom": "Hôpital de Bou Hanifia ;"
+        },
+        {
+            "Nom": "Hôpital de Mascara ;"
+        },
+        {
+            "Nom": "Hôpital de Zahana ;"
+        },
+        {
+            "Nom": "Hôpital de Oued Al Abtal ;"
+        },
+        {
+            "Nom": "Hôpital de Aouf ;"
+        },
+        {
+            "Nom": "Hôpital de Mohammadia."
+        },
+        {
+            "Nom": "Hôpital de Ouargla ;",
+            "Wilaya": "ourgla"
+        },
+        {
+            "Nom": "Hôpital de Touggourt ;"
+        },
+        {
+            "Nom": "Hôpital de Hassi Messaoud ;"
+        },
+        {
+            "Nom": "Hôpital de Taïbet."
+        },
+        {
+            "Nom": "Centre hospitalier et universitaire Benaouda Benzerdjeb ;",
+            "Wilaya": "oran"
+        },
+        {
+            "Nom": "Hôpital du 1er novembre 1954 ;"
+        },
+        {
+            "Nom": "Hôpital de Madjbeur Tami de Aïn El-Turk ;"
+        },
+        {
+            "Nom": "Hôpital de El-Mohgoun ;"
+        },
+        {
+            "Nom": "Hôpital Akid Othmane de Aïn El-Turk ;"
+        },
+        {
+            "Nom": "Hôpital Hammou Boutlelis ;"
+        },
+        {
+            "Nom": "Hôpital Emir Abdelkader ;"
+        },
+        {
+            "Nom": "Hôpital Boukhroufa Abdelkader ;"
+        },
+        {
+            "Nom": "Hôpital de Sidi Chahmi ;"
+        },
+        {
+            "Nom": "Hôpital Benyahia Zohra ;"
+        },
+        {
+            "Nom": "Hôpital Tazi Fatima ;"
+        },
+        {
+            "Nom": "Hôpital Les Pins ;"
+        },
+        {
+            "Nom": "Hôpital Nouar Fadéla ;"
+        },
+        {
+            "Nom": "Hôpital Hadj Abed Atika ;"
+        },
+        {
+            "Nom": "Hôpital d’Ouled Tlélat ;"
+        },
+        {
+            "Nom": "Hôpital de Gydel."
+        },
+        {
+            "Nom": "Hôpital d'El Bayadh ;",
+            "Wilaya": "el bayadh"
+        },
+        {
+            "Nom": "Hôpital d'El Abiodh Sidi Cheikh ;"
+        },
+        {
+            "Nom": "Hôpital de Bougtob."
+        },
+        {
+            "Nom": "Hôpital d'Illizi ;",
+            "Wilaya": "illizi"
+        },
+        {
+            "Nom": "Hôpital de Djanet."
+        },
+        {
+            "Nom": "Hôpital de Bordj Bou Arreridj ;",
+            "Wilaya": "bordj bou arreridj"
+        },
+        {
+            "Nom": "Hôpital de Medjana ;"
+        },
+        {
+            "Nom": "Hôpital de Ras El Oued."
+        },
+        {
+            "Nom": "Hôpital de Thénia[23];",
+            "Wilaya": "boumerdes"
+        },
+        {
+            "Nom": "Hôpital de Bordj Ménaïel[24];"
+        },
+        {
+            "Nom": "Hôpital Mohamed Boudaoud de Dellys[25]."
+        },
+        {
+            "Nom": "Hôpital d'El Tarf ;",
+            "Wilaya": "el tarf"
+        },
+        {
+            "Nom": "Hôpital d'El Kala ;"
+        },
+        {
+            "Nom": "Hôpital de Bouhadjar."
+        },
+        {
+            "Nom": "Hôpital de Tindouf.",
+            "Wilaya": "tindouf"
+        },
+        {
+            "Nom": "Hôpital de Tissemsilt ;",
+            "Wilaya": "tissemsilt"
+        },
+        {
+            "Nom": "Hôpital de Theniet El Had ;"
+        },
+        {
+            "Nom": "Hôpital de Bordj bou Naama."
+        },
+        {
+            "Nom": "Hôpital Bachir Bennacer ;",
+            "Wilaya": "el oued"
+        },
+        {
+            "Nom": "Hôpital d'El Maghaïer ;"
+        },
+        {
+            "Nom": "Hôpital de Djamaâ."
+        },
+        {
+            "Nom": "Hôpital Ali Boushaba ;",
+            "Wilaya": "khenchela"
+        },
+        {
+            "Nom": "Hôpital nouveau ;"
+        },
+        {
+            "Nom": "Hôpital de Chechar ;"
+        },
+        {
+            "Nom": "Hôpital de Kaïs."
+        },
+        {
+            "Nom": "Hôpital Houari Boumediène Sédrata ;",
+            "Wilaya": "souk ahras"
+        },
+        {
+            "Nom": "Hôpital Ibn Rochd Souk-Ahras ;"
+        },
+        {
+            "Nom": "Hôpital ancien Souk-Ahras."
+        },
+        {
+            "Nom": "Hôpital Lakhdar Bouchama ;",
+            "Wilaya": "tipaza"
+        },
+        {
+            "Nom": "Hôpital Djellaloui Mohamed spécialisé en psychiatrie ;",
+            "Wilaya": "tipaza"
+        },
+        {
+            "Nom": "Hôpital de neuro-chirurgie Cherchell ;"
+        },
+        {
+            "Nom": "Hôpital Dr Yahia Fares ;"
+        },
+        {
+            "Nom": "Hôpital Koubaili Mohamed Erabat ;"
+        },
+        {
+            "Nom": "Hôpital de Gouraïa."
+        },
+        {
+            "Nom": "Hôpital Mohamed Medahi ;",
+            "Wilaya": "mila"
+        },
+        {
+            "Nom": "Hôpital de Oued Athmania ;",
+            "Wilaya": "mila"
+        },
+        {
+            "Nom": "Hôpital des frères Maghlaoui ;"
+        },
+        {
+            "Nom": "Hôpital des frères Tobal ;"
+        },
+        {
+            "Nom": "Hôpital de Chelghoum Laïd ;"
+        },
+        {
+            "Nom": "Hôpital de Ferdjioua."
+        },
+        {
+            "Nom": "Hôpital Hamou Makour ;",
+            "Wilaya": "ain defla"
+        },
+        {
+            "Nom": "Hôpital de Khemis Miliana ;",
+            "Wilaya": "ain defla"
+        },
+        {
+            "Nom": "Hôpital de Miliana ;"
+        },
+        {
+            "Nom": "Hôpital d'El Attaf."
+        },
+        {
+            "Nom": "Hôpital de Naama ;",
+            "Wilaya": "naama"
+        },
+        {
+            "Nom": "Hôpital de Méchria ;",
+            "Wilaya": "naama"
+        },
+        {
+            "Nom": "Hôpital de Aïn Sefra."
+        },
+        {
+            "Nom": "Hôpital Docteur Benzerdjeb ;",
+            "Wilaya": "ain temouchent"
+        },
+        {
+            "Nom": "Hôpital Ahmed Medeghri ;"
+        },
+        {
+            "Nom": "Hôpital de Béni Saf ;"
+        },
+        {
+            "Nom": "Hôpital de Hammam Bouhadjar ;"
+        },
+        {
+            "Nom": "Hôpital de Aïn Témouchent ;"
+        },
+        {
+            "Nom": "Hôpital El amria."
+        },
+        {
+            "Nom": "Hôpital Brahim Tirichine ;",
+            "Wilaya": "ghardaia"
+        },
+        {
+            "Nom": "Hôpital de Metlili ;"
+        },
+        {
+            "Nom": "Hôpital Gueddi Bakir ;"
+        },
+        {
+            "Nom": "Hôpital d'El Ménéa ;"
+        },
+        {
+            "Nom": "Hôpital de Guerrara."
+        },
+        {
+            "Nom": "Hôpital Mohamed Boudiaf ;",
+            "Wilaya": "relizane"
+        },
+        {
+            "Nom": "Hôpital de Mazouna ;"
+        },
+        {
+            "Nom": "Hôpital de Oued Rhiou ;"
+        },
+        {
+            "Nom": "Hôpital de Yellel ;"
+        },
+        {
+            "Nom": "Hôpital de Mendes ;"
+        },
+        {
+            "Nom": "Hôpital d'Ami Moussa ;"
+        },
+        {
+            "Nom": "Hôpital de Zemmora (en construction)."
+        }
+    ]
+}

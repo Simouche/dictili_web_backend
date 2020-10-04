@@ -5,8 +5,8 @@ from accounts import apis
 
 api_router = SimpleRouter()
 api_router.register('users', apis.UserViewSet, basename='users')
-api_router.register('profiles', apis.ProfileViewSet, basename='users')
-api_router.register('access-times', apis.AccessTimesViewSet, basename='users')
+api_router.register('profiles', apis.ProfileViewSet, basename='profiles')
+api_router.register('access-times', apis.AccessTimesViewSet, basename='access-times')
 
 extra_urls = [
     path('login/', apis.LoginApi.as_view()),
